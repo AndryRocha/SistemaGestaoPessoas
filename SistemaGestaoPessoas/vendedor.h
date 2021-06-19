@@ -3,7 +3,7 @@
 
 #include "empregado.h"'
 
-class Vendedor : public Vendedor {
+class Vendedor : public Empregado {
 public:
     Vendedor(std::string nome, std::string endereco, std::string telefone,
              int codigoSetora, double salarioBase, double imposto,

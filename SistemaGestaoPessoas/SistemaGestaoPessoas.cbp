@@ -32,7 +32,13 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="administrador.h" />
+		<Unit filename="empregado.h" />
+		<Unit filename="fornecedor.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="operario.h" />
+		<Unit filename="pessoa.h" />
+		<Unit filename="vendedor.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
