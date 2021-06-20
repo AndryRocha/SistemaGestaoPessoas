@@ -48,7 +48,7 @@ int Empregado::getImposto() {
     return imposto;
 }
 
-void Empregado::setImposto(int impostoAux) {
+void Empregado::setImposto(int impostoAux)
     imposto = impostoAux;
 }
 
