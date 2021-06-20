@@ -32,6 +32,7 @@ void Operario::setValorProcucao(double valorProducaoAux) {
 }
 
 double Operario::calcularSalario() {
+    imposto = imposto / 100;
     double descontoImpostos = salarioBase * imposto;
     comissao = salarioBase * (valorProducao / 100);
     return (salarioBase - descontoImpostos) + comissao;

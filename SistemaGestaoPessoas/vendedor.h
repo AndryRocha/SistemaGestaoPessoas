@@ -32,6 +32,7 @@ void Vendedor::setValorVendas(double valorVendasAux) {
 }
 
 double Vendedor::calcularSalario() {
+    imposto = imposto / 100;
     double descontoImpostos = salarioBase * imposto;
     comissao = salarioBase * (valorVendas / 100);
     return (salarioBase - descontoImpostos) + comissao;

@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include <iostream>
 #include <locale.h>
 
@@ -42,12 +43,12 @@ int main() {
         switch(op) {
             case 1:
                 system("cls");
-                cout << "-------- Atualizar pessoa -------" << endl;
+                cout << "-------- Incluir pessoa -------" << endl;
                 adicionarPessoa();
                 break;
             case 2:
                 system("cls");
-                cout << "-------- Incluir pessoa -------" << endl;
+                cout << "-------- Atualizar pessoa -------" << endl;
                 atualizarPessoa();
                 break;
             case 3:
@@ -98,7 +99,7 @@ int main() {
             cout << "--- Admininstrador ---" << endl;
 
             std::string nome;
-            cout << "Nome: "
+            cout << "Nome: ";
             cin >> nome;
             cout << endl;
 
@@ -299,7 +300,7 @@ int main() {
         }
 
         void atualizaAdm(std::string nome, std::string telefone) {
-            for(int = 0; i < numAdm; i++) {
+            for(int i = 0; i < numAdm; i++) {
                 if(administradores[i]->getNome() == nome && administradores[i]->getTelefone() == telefone) {
                     std::string nome;
                     cout << "Nome: "
@@ -481,25 +482,25 @@ int main() {
 
         void relatorioPessoas() {
             for(int i = 0; i < numAdm; i++) {
-                cout << i << " - ";
+                cout << "Administrador " << i << " - ";
                 cout << "Nome: " << administradores[i]->getNome() << ", ";
                 cout << "Telefone: " << administradores[i]->getTelefone() << ", ";
                 cout << "Endereço: " << administradores[i]->getEndereco() << ";" << endl;
             }
             for(int i = 0; i < numFornecedores; i++) {
-                cout << i << " - ";
+                cout << "Fornecedor " << i << " - ";
                 cout << "Nome: " << fornecedores[i]->getNome() << ", ";
                 cout << "Telefone: " << fornecedores[i]->getTelefone() << ", ";
                 cout << "Endereço: " << fornecedores[i]->getEndereco() << ";" << endl;
             }
             for(int i = 0; i < numOperarios; i++) {
-                cout << i << " - ";
+                cout << "Operario " <<i << " - ";
                 cout << "Nome: " << operarios[i]->getNome() << ", ";
                 cout << "Telefone: " << operarios[i]->getTelefone() << ", ";
                 cout << "Endereço: " << operarios[i]->getEndereco() << ";" << endl;
             }
             for(int i = 0; i < numVendedores; i++) {
-                cout << i << " - ";
+                cout << "Vendedor " << i << " - ";
                 cout << "Nome: " << vendedores[i]->getNome() << ", ";
                 cout << "Telefone: " << vendedores[i]->getTelefone() << ", ";
                 cout << "Endereço: " << vendedores[i]->getEndereco() << ";" << endl;
@@ -508,7 +509,7 @@ int main() {
 
         void relatorioFornecedores() {
             for(int i = 0; i < numFornecedores; i++) {
-                cout << i << " - ";
+                cout << "Fornecedor " <<i << " - ";
                 cout << "Nome: " << fornecedores[i]->getNome() << ", ";
                 cout << "Telefone: " << fornecedores[i]->getTelefone() << ", ";
                 cout << "Endereço: " << fornecedores[i]->getEndereco() << ", ";

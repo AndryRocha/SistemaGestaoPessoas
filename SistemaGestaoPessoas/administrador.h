@@ -16,7 +16,7 @@ private:
     double ajudaCusto;
 };
 
-Administrador(std::string nome, std::string endereco, std::string telefone,
+Administrador::Administrador(std::string nome, std::string endereco, std::string telefone,
               int codigoSetora, double salarioBase, double imposto,
               double ajudaCustoAux) : Empregado(nome, endereco, telefone,
                                                 codigoSetora, salarioBase, imposto) {
@@ -33,6 +33,7 @@ void Administrador::setAjudaCusto(double ajudaCustoAux) {
 
 
 double Administrador::calcularSalario() {
+    imposto = imposto / 100;
     double descontoImpostos = salarioBase * imposto;
     return (salarioBase - descontoImpostos) + ajudaCusto;
 }

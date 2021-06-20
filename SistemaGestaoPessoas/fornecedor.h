@@ -6,7 +6,7 @@
 class Fornecedor : public Pessoa {
 public:
     Fornecedor(std::string nome, std::string endereco, std::string telefone,
-               double valorCredito, double valorDivida) : Pessoa(nome, endereco, telefone);
+               double valorCreditoAux, double valorDividaAux) : Pessoa(nome, endereco, telefone);
     void setValorCredito(double valorCreditoAux);
     double getValorCredito();
     void setValorDivida(double valorDividaAux);
@@ -28,19 +28,19 @@ double Fornecedor::obterSaldo() {
     return valorCredito - valorDivida;
 }
 
-void Fornecedor::setValorCredito(std::string valorCreditoAux) {
+void Fornecedor::setValorCredito(double valorCreditoAux) {
     valorCredito = valorCreditoAux;
 }
 
-std::string Fornecedor::getValorCredito() {
+double Fornecedor::getValorCredito() {
     return valorCredito;
 }
 
-void Fornecedor::setValorDivida(std::string valorDividaAux) {
+void Fornecedor::setValorDivida(double valorDividaAux) {
     valorDivida = valorDividaAux;
 }
 
-std::string Fornecedor::getValorDivida() {
+double Fornecedor::getValorDivida() {
     return valorDivida;
 }
 

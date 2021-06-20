@@ -3,7 +3,7 @@
 
 class Pessoa {
 public:
-    Pessoa(std::string nome, std::string endereco, std::string telefone);
+    Pessoa(std::string nomeAux, std::string enderecoAux, std::string telefoneAux);
     void setNome(std::string nomeAux);
     std::string getNome();
     void setEndereco(std::string enderecoAux);
@@ -17,7 +17,7 @@ private:
     std::string telefone;
 };
 
-Pessoa::Pessoa(std::string nome, std::string endereco, std::string telefone) {
+Pessoa::Pessoa(std::string nomeAux, std::string enderecoAux, std::string telefoneAux) {
     nome = nomeAux;
     endereco = enderecoAux;
     telefone = telefoneAux;
@@ -27,7 +27,7 @@ void Pessoa::setNome(std::string nomeAux) {
     nome = nomeAux;
 }
 
-void Pessoa::getNome() {
+std::string Pessoa::getNome() {
     return nome;
 }
 
@@ -35,7 +35,7 @@ void Pessoa::setEndereco(std::string enderecoAux) {
     endereco = enderecoAux;
 }
 
-void Pessoa::getEndereco() {
+std::string Pessoa::getEndereco() {
     return endereco;
 }
 
@@ -43,7 +43,7 @@ void Pessoa::setTelefone(std::string telefoneAux) {
     telefone = telefoneAux;
 }
 
-void Pessoa::getTelefone() {
+std::string Pessoa::getTelefone() {
     return elefone;
 }
 

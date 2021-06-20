@@ -8,11 +8,11 @@ public:
     Empregado(std::string nome, std::string endereco, std::string telefone,
               int codigoSetoraAux, double salarioBaseAux, double impostoAux) : Pessoa(nome, endereco, telefone);
     int getCodigoSetor();
-    void setCodigoSetor(int codigoSetor);
+    void setCodigoSetor(int codigoSetorAux);
     double getSalarioBase();
-    void setSalarioBase(double salarioBase);
+    void setSalarioBase(double salarioBaseAux);
     double getImposto();
-    void setImposto(double imposto);
+    void setImposto(double impostoAux);
     virtual double calcularSalario();
 
 private:
@@ -40,7 +40,7 @@ double Empregado::getSalarioBase() {
     return salarioBase;
 }
 
-void Empregado::setSalarioBase(int salarioBaseAux) {
+void Empregado::setSalarioBase(double salarioBaseAux) {
     salarioBase = salarioBaseAux;
 }
 
@@ -53,6 +53,7 @@ void Empregado::setImposto(int impostoAux) {
 }
 
 virtual double Empregado::calcularSalario() {
+    imposto = imposto / 100;
     double descontoImpostos = salarioBase * imposto;
     return salarioBase - descontoImpostos;
 }
