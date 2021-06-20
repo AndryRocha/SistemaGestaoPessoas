@@ -1,7 +1,7 @@
 #ifndef VENDEDOR_H_INCLUDED
 #define VENDEDOR_H_INCLUDED
 
-#include "empregado.h"'
+#include "empregado.h"
 
 class Vendedor : public Empregado {
 public:

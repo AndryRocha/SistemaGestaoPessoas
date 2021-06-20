@@ -542,7 +542,7 @@ int main() {
                 cout << "Salário calculado: " << operarios[i]->calcularSalario() << ";" << endl;
             }
             for(int i = 0; i < numVendedores; i++) {
-                cout << i << " - "
+                cout << "Vendedor " << i << " - "
                 cout << "Nome: " << vendedores[i]->getNome(); << ", ";
                 cout << "Telefone: " << vendedores[i]->getTelefone() << ", ";
                 cout << "Endereço: " << vendedores[i]->getEndereco() << ", ";
